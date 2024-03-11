@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeeMoO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h2 class="Logo">Logo</h2>
+        <nav class="nav">
+            <a href="#" id="MeLink">About Me</a>
+            <a href="#act1" id="WorkLink">My Work</a>
+            <a href="#act2" id="PayLink">Payment Methods</a>
+            <a href="#act3" id="contLink">Contact</a>
+            <button class="btn" id="HireLink">Hire Me</button>
+        </nav>
+    </header>
+
+    <div class="Me">
+        <img src="MyImage.jpeg" alt="Photo of Me" class="MyImage">
+        <p class="Description">Hello, my name is Ahmed 
+            or you can call me BeeMoO, I am a Programmer mainly on Roblox and know Lua
+             language experienced at it, I also know JavaScript , CSS, and HTML
+             . I am 16 years old (17 this year) and hoping to become a software engineer,
+              I am from Egypt speaking Arabic
+              as first language and English as second language but fluent at it.
+        </p>
+    </div>
+    <div class="Work-Container" >
+         <!--Past Work section-->
+        <div class="Work" >
+            <h2  id="act1">My Work:</h2>
+            <p> You are in one of them right now</p>
+            <label>But on Roblox:</label>
+        </div>
+        <div class="full-width-line"></div>
+        <div class="Container">
+            <div class="Combat">
+                <label>Combat System</label>
+                <div class="Videos">
+                    <video width="320" height="240" autoplay controls loop>
+                        <source src="Killing Preview (online-video-cutter.com).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video width="320" height="240" autoplay controls loop>
+                        <source src="IdlePreview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video width="320" height="240" autoplay controls loop muted>
+                        <source src="DeathPreview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="full-width-line"></div>
+            <div class="Combat">
+                <label>Simulator System</label>
+                <div class="Videos">
+                    <video width="320" height="240" autoplay controls loop muted>
+                        <source src="Jumping Preview (online-video-cutter.com).mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video width="320" height="240" autoplay controls loop muted>
+                        <source src="HatchingAndBuying.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video width="320" height="240" autoplay controls loop muted>
+                        <source src="Equipping.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video width="320" height="240" autoplay controls loop muted>
+                        <source src="Equip Best and Unequip.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video width="320" height="240" autoplay controls loop muted>
+                        <source src="TradingPreview.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="full-width-line"></div>
+            <p>(I can also do...)</p>
+            <p class="MoreEx"> Daily rewards, (FPS), Tweening(animations on UI), Hotel system, Obbies, Narrator system.</p>
+            <p>(I couldn't show more videos as I lost some of my scripts)</p>
+        </div>
+
+        <!--Pay section-->
+        <div class="full-width-line" id="act2"></div>
+        <div class="Payment" >
+            <h2 >Payment Methods:</h2>
+            <p>If the payment is in USD then I only accept transactions through BTC or binance or bitcoin (All same)</p>
+            <p>Although I may accept it by Robux if work is in Roblox.</p>
+        </div>
+        <div class="full-width-line" id="act3"></div>
+
+        <div class="Contact" >
+            <h2 >Contact</h2>
+            <div class="Icons">
+                <p><img src="4373196_discord_logo_logos_icon.png" alt="Discord">it_is_beemoo</p>
+                <a href="https://www.instagram.com/ahmed_amer292/"><img src="6929237_instagram_icon.png" alt="Instagram">Ahmed_Amer292</a>
+                <a href="https://www.roblox.com/users/1204264807/profile"><img src="8656316_roblox_gaming_play_application_logo_icon.png" alt="Instagram">itbeemoo</a>
+            </div>
+        </div>
+
+        <div class="full-width-line" id="Hire"></div>
+
+        <div class="Hire">
+            <h2 >To Hire</h2>
+            <form action="#" class="HireSection" id="myForm">
+                <div class="input-box">
+                    <label >Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="input-box">
+                    <label>Game Name</label>
+                    <input type="text" id="gameName" required>
+                </div>
+                <div class="input-box">
+                    <label id="Hire">Game Description</label>
+                    <textarea id="gameDesc" name="game_description" rows="4" cols="50"></textarea>
+                </div>
+                <div class="input-box">
+                    <label>Discord username</label>
+                    <input type="text" id="UsernameDis" required>
+                </div>
+                <div class="input-box">
+                    <label>Payment</label>
+                    <select name="PaymentType" id="PaymentType">
+                        <option value="Robux">Robux</option>
+                        <option value="$">$</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label>Payment Amount</label>
+                    <input type="number" id="Amount">
+                </div>
+
+                <div class="neg">
+                    <label>negotiable</label>
+                    <input type="checkbox" id="isNeg" required>
+                </div>
+
+                <button type="submit" class="Send" id="send" onclick="handleFormSubmission()">Send Invite</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+        function handleFormSubmission() {
+            const form = document.getElementById('myForm');
+            const submitButton = document.getElementById('send');
+
+            // Disable the button immediately
+            submitButton.disabled = true;
+
+            // Check if the cooldown period has elapsed (2 hours)
+            const lastSubmissionTimestamp = localStorage.getItem('lastSubmissionTimestamp');
+            const currentTime = Date.now();
+            const cooldownDuration = 10 * 1000; // 2 hours in milliseconds
+
+            if (!lastSubmissionTimestamp || currentTime - lastSubmissionTimestamp >= cooldownDuration) {
+                // Allow the submission
+                localStorage.setItem('lastSubmissionTimestamp', currentTime);
+                alert('Sending the email')
+                sendEmail(event);
+            } else {
+                // Display a message or handle the cooldown period
+                alert('Please wait for the cooldown period to expire.');
+                // Optionally, re-enable the button after the cooldown period
+                setTimeout(() => {
+                    submitButton.disabled = false;
+                }, cooldownDuration);
+            }
+        }
+    </script>
+
+    <script>
+        function sendEmail(e) {
+            e.preventDefault();
+            alert('sending')
+            var isChecked = document.getElementById('isNeg').checked ? "yes" : "no";
+            Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "beemoo.workshop@gmail.com",
+                Password : "D18A9328E8A007669816F734B2D344B4C05B",
+                To : 'beemoo.workshop@gmail.com',
+                From : document.getElementById('email').value,
+                Subject : "Hire Request",
+                Body : '(The Game Name) '+ document.getElementById('gameName').value + '   (The Game Description) '+ document.getElementById('gameDesc').value
+                + '      (Discord username)' + document.getElementById('UsernameDis').value + '     (Payment Type) ' + document.getElementById('PaymentType').value
+                + '     (Payment Amount) ' + document.getElementById('Amount').value + '     (Negiotable) ' + isChecked,
+            }).then(
+            console.log(document.getElementById('gameName').value),
+            console.log(document.getElementById('gameDesc').value),
+            console.log(document.getElementById('UsernameDis').value),
+            console.log(document.getElementById('PaymentType').value),
+            console.log(document.getElementById('Amount').value),
+            isChecked,
+            console.log(document.getElementById('email').value),
+            message => alert('Sent')
+            );
+        }
+
+    </script>
+
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+</body>
+</html>
