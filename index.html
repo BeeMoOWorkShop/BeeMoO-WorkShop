@@ -164,12 +164,9 @@
             if (!lastSubmissionTimestamp || currentTime - lastSubmissionTimestamp >= cooldownDuration) {
                 // Allow the submission
                 localStorage.setItem('lastSubmissionTimestamp', currentTime);
-                alert('Sending the email')
                 sendEmail(event);
             } else {
-                // Display a message or handle the cooldown period
                 alert('Please wait for the cooldown period to expire.');
-                // Optionally, re-enable the button after the cooldown period
                 setTimeout(() => {
                     submitButton.disabled = false;
                 }, cooldownDuration);
@@ -180,7 +177,6 @@
     <script>
         function sendEmail(e) {
             e.preventDefault();
-            alert('sending')
             var thingy = "'"
             var isChecked = document.getElementById('isNeg').checked ? "yes" : "no";
             Email.send({
@@ -191,9 +187,7 @@
                 From : 'beemoo.workshop@gmail.com',
                 Subject : "Hire Request",
                 Body : 'Thank you for contacting Me, I will review your request soon enough and consider it, I will add you on discord if accepted.'
-            }).then(
-            message => alert('Sent')
-            );
+            })
         }
 
     </script>
