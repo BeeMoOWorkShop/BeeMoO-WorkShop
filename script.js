@@ -4,7 +4,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const PayLink = document.getElementById('PayLink');
     const Contlink = document.getElementById('contLink');
     const Hirelink = document.getElementById('HireLink');
+    const MenuClick = document.getElementById('Menu');
 
+
+    
     /*workLink.addEventListener('click', (e) => {
         e.preventDefault();
         const bookmark = document.getElementById('WorkShow');
@@ -15,6 +18,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         e.preventDefault();
         const bookmark = document.getElementById('Hire');
         bookmark.scrollIntoView({ behavior: 'smooth' });
+    });
+
+    MenuClick.addEventListener('click', (e) => {
+        e.preventDefault();
+        console.log('Clicked')
+        if (document.querySelector('.nav').classList.contains('active')) {
+        document.querySelector('.nav').classList.remove('active')
+        document.querySelector('.header').classList.remove('active')
+        } else {
+            document.querySelector('.nav').classList.add('active')
+            document.querySelector('.header').classList.add('active')
+        }
     });
 
     /*PayLink.addEventListener('click', (e) => {
