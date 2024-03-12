@@ -8,7 +8,7 @@
 </head>
 <body>
     <header class="header">
-        <h2 class="Logo">Logo</h2>
+        <h2 class="Logo">Hello!</h2>
         <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -30,7 +30,7 @@
         <img src="MyImage.jpeg" alt="Photo of Me" class="MyImage">
         <p class="Description">Hello, my name is Ahmed 
             or you can call me BeeMoO, I am a Programmer mainly on Roblox and know Lua
-             language experienced at it, I also know JavaScript , CSS, and HTML
+             language experienced at it, I also know JavaScript , CSS (still learning so might be couple of problems with the site), and HTML
              . I am 16 years old (17 this year) and hoping to become a software engineer,
               I am from Egypt speaking Arabic
               as first language and English as second language but fluent at it.
@@ -109,7 +109,8 @@
             <div class="Icons">
                 <p><img src="4373196_discord_logo_logos_icon.png" alt="Discord ">it_is_beemoo</p>
                 <a href="https://www.instagram.com/ahmed_amer292/"><img src="6929237_instagram_icon.png" alt="Instagram ">Ahmed_Amer292</a>
-                <a href="https://www.roblox.com/users/1204264807/profile"><img src="8656316_roblox_gaming_play_application_logo_icon.png" alt="Instagram ">itbeemoo</a>
+                <a href="https://www.roblox.com/users/1204264807/profile"><img src="8656316_roblox_gaming_play_application_logo_icon.png" alt="Roblox ">itbeemoo</a>
+                <a href="https://www.facebook.com/profile.php?id=100080236938734"><img src="Facebook.png " alt="Facebook "> Ahmed Amer</a>
             </div>
         </div>
 
@@ -117,41 +118,43 @@
 
         <div class="Hire">
             <h2 >To Hire</h2>
-            <form action="#" class="HireSection" id="myForm">
+            <form target="_top" action="https://script.google.com/macros/s/AKfycbzz8Py_JFjyLsvva9eWy3yNr8HyOblglEmq9Yj7NUr4Gsvd5wa17xpxX8KAcvFIV18_Kw/exec"
+             method="POST" class="HireSection" name="HireForm" id="myForm" onsubmit="handleFormSubmission()">
+                <input type="hidden" name="access_key" value="e60be604-ffb6-4dee-af22-19d37f73e2b1">
                 <div class="input-box">
                     <label >Email</label>
-                    <input type="email" id="email" required>
+                    <input type="email" id="email" name="Email" required>
                 </div>
                 <div class="input-box">
                     <label>Game Name</label>
-                    <input type="text" id="gameName" required>
+                    <input type="text" id="gameName" name="Game-Name" required>
                 </div>
                 <div class="input-box">
                     <label id="Hire">Game Description</label>
-                    <textarea id="gameDesc" name="game_description" rows="4" cols="50"></textarea>
+                    <textarea name="Game-Description" id="gameDesc" rows="4" cols="50"></textarea>
                 </div>
                 <div class="input-box">
                     <label>Discord username</label>
-                    <input type="text" id="UsernameDis" required>
+                    <input type="text" name="Discord" id="UsernameDis" required>
                 </div>
                 <div class="input-box">
                     <label>Payment</label>
-                    <select name="PaymentType" id="PaymentType">
+                    <select name="PayType" id="PaymentType">
                         <option value="Robux">Robux</option>
                         <option value="$">$</option>
                     </select>
                 </div>
                 <div class="input-box">
                     <label>Payment Amount</label>
-                    <input type="number" id="Amount">
+                    <input type="number" name="amount" id="Amount">
                 </div>
 
                 <div class="neg">
                     <label>negotiable</label>
-                    <input type="checkbox" id="isNeg" required>
+                    <input type="checkbox" name="neg" id="isNeg">
                 </div>
 
-                <button type="submit" class="Send" id="send" onclick="handleFormSubmission()">Send Invite</button>
+                <button type="submit" value="submit" class="Send" id="send">Send Invite</button>
             </form>
         </div>
     </div>
@@ -173,6 +176,8 @@
             if (!lastSubmissionTimestamp || currentTime - lastSubmissionTimestamp >= cooldownDuration) {
                 // Allow the submission
                 localStorage.setItem('lastSubmissionTimestamp', currentTime);
+                submitButton.disabled = false;
+                console.log('submitting');
                 sendEmail(event);
             } else {
                 alert('Please wait for the cooldown period to expire.');
@@ -184,8 +189,8 @@
     </script>
 
     <script>
-        function sendEmail(e) {
-            e.preventDefault();
+
+        function sendEmail() {
             var thingy = "'"
             var isChecked = document.getElementById('isNeg').checked ? "yes" : "no";
             Email.send({
@@ -195,10 +200,12 @@
                 To : document.getElementById('email').value,
                 From : 'beemoo.workshop@gmail.com',
                 Subject : "Hire Request",
-                Body : 'Thank you for contacting Me, I will review your request soon enough and consider it, I will add you on discord if accepted.'
+                Body : '<br>Thank you for contacting Me, I will review your request soon enough and consider it, I will add you on discord if accepted.'
+                + '<br> Your Request included' + '<br> Game Name: '+ document.getElementById('gameName').value +'<br> Game Description: '+ document.getElementById('gameDesc').value
+                +'<br> Discord username: '+ document.getElementById('UsernameDis').value +'<br> Payment type: '+ document.getElementById('PaymentType').value +
+                '<br> Payment Amount: '+ document.getElementById('Amount').value + '<br> Can Negiotiate?: '+ isChecked
             })
         }
-
     </script>
 
     <script src="https://smtpjs.com/v3/smtp.js">
