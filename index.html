@@ -171,7 +171,7 @@
             // Check if the cooldown period has elapsed (2 hours)
             const lastSubmissionTimestamp = localStorage.getItem('lastSubmissionTimestamp');
             const currentTime = Date.now();
-            const cooldownDuration = 10 * 1000; // 2 hours in milliseconds
+            const cooldownDuration =  120 * 60 * 1000; // 2 hours in milliseconds
 
             if (!lastSubmissionTimestamp || currentTime - lastSubmissionTimestamp >= cooldownDuration) {
                 // Allow the submission
