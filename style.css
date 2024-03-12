@@ -359,7 +359,7 @@ textarea {
 }
 
 /* Styles for mobile screens */
-@media (max-width: 850px) {
+@media screen and ( max-width: 850px) and (min-width: 400px) {
     .Me {
         display: block;
         margin-top: 10vh;
@@ -383,8 +383,8 @@ textarea {
     }
 
     .Videos video {
-        width: 20%; /* Sets video width to match the container width */
-        height: auto; /* Maintains aspect ratio */
+        width: 20%;
+        height: auto; 
     }
 
     .Work {
@@ -394,10 +394,11 @@ textarea {
     .Container .MoreEx,
     .Container p {
         font-size: .8em;
+        word-wrap: break-word;
     }
 
     header {
-        height: 10vh;
+        height: 10%;
         display: flex;
         transition: height .25s ease-in-out;
     }
@@ -409,8 +410,11 @@ textarea {
     }
 
     header .Menu {
+        height: 80%;
+        width: auto;
         display: inline;
         right: 75%;
+        top: 10%;
         position: absolute;
         background-color: #333;
         border: #333;
@@ -426,11 +430,14 @@ textarea {
     }
 
     header.active {
-        height: 50vh;
+        height: 50%;
     }
 
     header.active .Menu {
-        bottom: 82%;
+        margin-bottom: 50%;
+        margin-top: -3.5%;
+        height: 35%;
+        width: auto;
     }
     header.active h2 {
         bottom: 44%;
@@ -468,6 +475,80 @@ textarea {
         align-self: center;
     }
 }
+
+@media screen and ( max-width: 400px) {
+    .Me {
+        display: block;
+        margin-top: 10vh;
+    }
+    .Me .MyImage {
+        display: none;
+    }
+    .Me .Description {
+        display: inline;
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        font-size: 1em;
+        margin-bottom: -25vh;
+        margin-left: 9vh;
+    }
+
+    .Videos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Videos video {
+        width: 20%;
+        height: auto; 
+    }
+
+    .Work {
+        margin-top: 140vh;
+    }
+
+    .Container .MoreEx,
+    .Container p {
+        font-size: .8em;
+        word-wrap: break-word;
+    }
+
+    header {
+        height: 10%;
+        display: flex;
+        transition: height .25s ease-in-out;
+    }
+    header h2 {
+        display: flex;
+        position: relative;
+        left: 40%;
+        right: 70%;
+    }
+
+    header .Menu {
+        height: 80%;
+        width: auto;
+        display: inline;
+        right: 75%;
+        top: 10%;
+        position: absolute;
+        background-color: #333;
+        border: #333;
+        transition: border .3 ease;
+        bottom: 17%;
+    }*/
+
+    header .Menu img {
+        display: flex;
+    }
+    header nav {
+        display: none;
+    }
+
+}
+
+
 
 /*.Hire {
     width: 40%;
