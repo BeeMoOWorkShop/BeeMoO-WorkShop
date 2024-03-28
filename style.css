@@ -14,6 +14,8 @@ body {
     display: flex;
     background-color: #ece7e1;
     min-height: 100vh;
+    width: 100%;
+    height: 100%;
 }
 
 .Logo {
@@ -176,6 +178,8 @@ header .Menu {
     font-weight: 500;
     font-size: 1.2em;
     text-decoration: none;
+    width: 100%;
+    height: auto;
 }
 
 .Combat label {
@@ -189,6 +193,8 @@ header .Menu {
     font-family: Arial, Helvetica, sans-serif;
     text-decoration: underline;
     text-align: justify;
+    width: 100%;
+    height: auto;
 }
 
 .Videos video {
@@ -358,8 +364,183 @@ textarea {
     justify-content: space-around; /* Adjusts spacing between videos */
 }
 
+.successful {
+    color: green;
+}
+
+.fail {
+    color: red;
+}
+
+
+@media (max-width: 1264px) {
+    .Work {
+        margin-top: 250vh;
+    }
+
+    .Me {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+      
+      .Me .MyImage {
+        display:  block;
+        width: 100%;
+        height: auto;
+        right: 0;
+        margin: 0;
+        left: 0;/* This will prevent the image from breaking */
+      }
+      
+      .Me p {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        top: 0;
+        right: inherit;
+        padding-top: 9rem;
+      }
+    .header {
+        display: none;
+    }
+
+    .headerSmaller {
+        width: 100%;
+        height: 8%;
+        display: flex;
+        transition: height 0.2s ease;
+    }
+
+    .Hamburger {
+        height: 10%;
+        width: 100%;
+        user-select: none;
+        display: flex;
+        position: relative; /* Added to maintain the position of the Menu icon */
+    }
+    
+    .Hamburger .Menu{
+        display: flex;
+        font-size: 20px;
+        background-color: #333;
+        border: #333;
+        transition: border 0.3s ease;
+        cursor: pointer;
+        margin-bottom: 18%;
+        align-self: center;
+        margin-top: 38%;
+       left: 0;
+       z-index: 1;
+    }
+
+    .Hamburger .Menu img {
+       position: absolute;
+       margin-top: -2%;
+    }
+    
+    .Logo {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: center;
+        height: auto;
+        
+    }
+
+    .headerSmaller nav {
+        display: none;
+    }
+
+    .headerSmaller.active {
+        display: block;
+        height: 60%;
+        transition: height .2s ease;
+    }
+
+    .headerSmaller.active .Hamburger {
+        height: 10%;
+        width: 100%;
+    }
+
+    .headerSmaller.active .Hamburger .Menu {
+        margin: 0;
+        top: 0;
+    }
+
+    .headerSmaller.active .Hamburger .Logo {
+        top: 60%;
+    }
+    
+    .headerSmaller.active .nav {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding-right: 50%;
+        padding-left: 45%;
+    }
+    
+    .headerSmaller.active .nav a {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 1em;
+        text-decoration: none;
+        font-size: 20px;
+        white-space: nowrap;
+        bottom: 5%;
+    }
+
+    .Container {
+        width: 100%;
+    }
+
+    .Container .MoreEx {
+        display: block;
+    }
+
+    .Combat  {
+        display: block;
+    }
+
+    .Combat label {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .Videos {
+        padding-top: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Videos video {
+        width: 70%;
+        height: auto; 
+    }
+
+    .Work {
+        margin-top: -550vh;
+    }
+
+    body {
+        display: block;
+    }
+}
+
 /* Styles for mobile screens */
-@media screen and ( max-width: 900px) and (max-height: 900px) and (min-width: 400px) {
+/*@media screen and ( max-width: 900px) and (max-height: 900px) and (min-width: 400px) {
     .Me {
         display: block;
         margin-top: 10vh;
@@ -426,7 +607,7 @@ textarea {
         border: #333;
         transition: border .3 ease;
         bottom: 17%;
-    }*/
+    }
 
     header .Menu img {
         display: flex;
@@ -543,7 +724,7 @@ textarea {
         border: #333;
         transition: border .3 ease;
         bottom: 17%;
-    }*/
+    }
 
     header .Menu img {
         display: flex;
@@ -552,4 +733,4 @@ textarea {
         display: none;
     }
 
-}
+}*/
