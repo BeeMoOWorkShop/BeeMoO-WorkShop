@@ -23,14 +23,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
     MenuClick.addEventListener('click', (e) => {
         e.preventDefault();
         console.log('Clicked')
-        if (document.querySelector('.nav').classList.contains('active')) {
-        document.querySelector('.nav').classList.remove('active')
-        document.querySelector('.header').classList.remove('active')
+        if (document.querySelector('.headerSmaller').classList.contains('active')) {
+        document.querySelector('.headerSmaller').classList.remove('active')
         } else {
-            document.querySelector('.nav').classList.add('active')
-            document.querySelector('.header').classList.add('active')
+            document.querySelector('.headerSmaller').classList.add('active')
         }
     });
+      
 
     /*PayLink.addEventListener('click', (e) => {
         e.preventDefault();
