@@ -22,15 +22,30 @@
             <button class="btn" id="HireLink" class="navs">Hire Me</button>
         </nav>
 
-        <button id="Menu" class="Menu"><img class="Menu" src="menu.png" alt="Menu"></button>
+    </header>
+
+    <header class="headerSmaller">
+        <div class="Hamburger">
+            <button id="Menu" class="Menu"><img id="Menu" class="Menu" src="menu.png" alt="Menu"></button>
+            <h2 class="Logo">Hello!</h2>
+        </div>
+        <nav class="nav">
+            <a href="#" id="MeLink" class="navs">About Me</a>
+            <a href="#act1" id="WorkLink" class="navs">My Work</a>
+            <a href="#act2" id="PayLink" class="navs">Payment Methods</a>
+            <a href="#act3" id="contLink" class="navs">Contact</a>
+            <button class="btn" id="HireLink" class="navs">Hire Me</button>
+        </nav>
+
+        
     </header>
     
 
     <div class="Me">
         <img src="MyImage.jpeg" alt="Photo of Me" class="MyImage">
         <p class="Description">Hello, my name is Ahmed 
-            or you can call me BeeMoO, I am a Programmer mainly on Roblox and know Lua
-             language experienced at it, I also know JavaScript , CSS (still learning so might be couple of problems with the site), and HTML
+            or you can call me BeeMoO (username in Roblox), I am a Programmer mainly on Roblox and know Lua
+             language experienced at it, I also know and learning JavaScript , CSS (still learning so might be couple of problems with the site), and HTML
              . I am 16 years old (17 this year) and hoping to become a software engineer,
               I am from Egypt speaking Arabic
               as first language and English as second language but fluent at it.
@@ -48,15 +63,15 @@
             <div class="Combat">
                 <label>Combat System</label>
                 <div class="Videos">
-                    <video width="320" height="240" autoplay controls loop>
+                    <video id="Video" width="320" height="240" autoplay controls loop>
                         <source src="Killing Preview (online-video-cutter.com).mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop>
+                    <video id="Video" width="320" height="240" autoplay controls loop>
                         <source src="IdlePreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="DeathPreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -66,23 +81,23 @@
             <div class="Combat">
                 <label>Simulator System</label>
                 <div class="Videos">
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="Jumping Preview (online-video-cutter.com).mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="HatchingAndBuying.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="Equipping.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="Equip Best and Unequip.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="TradingPreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -92,31 +107,31 @@
             <div class="Combat">
                 <label>Tower Defense System</label>
                 <div class="Videos">
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="Queue.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="PlacingPreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="UpgradePreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="StrongPreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="SellingPreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="MaxTowersPreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
-                    <video width="320" height="240" autoplay controls loop muted>
+                    <video id="Video" width="320" height="240" autoplay controls loop muted>
                         <source src="EndGamePreview.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -189,6 +204,7 @@
                 </div>
 
                 <button type="submit" value="submit" class="Send" id="send">Send Invite</button>
+                <span id="success"></span>
             </form>
         </div>
     </div>
@@ -244,5 +260,7 @@
 
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
+
+    <script src="Form.js"></script>
 </body>
 </html>
