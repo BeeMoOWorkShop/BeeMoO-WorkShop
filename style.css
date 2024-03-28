@@ -488,6 +488,7 @@ textarea {
         height: 100%;
         padding-right: 50%;
         padding-left: 45%;
+        border: 2px solid white;
     }
     
     .headerSmaller.active .nav a {
@@ -537,6 +538,13 @@ textarea {
 
     body {
         display: block;
+    }
+}
+
+@media (max-width : 1264px) and (orientation: landscape) {
+    .headerSmaller.active .nav {
+        overflow-y: auto;
+        max-height: 50vh;
     }
 }
 
