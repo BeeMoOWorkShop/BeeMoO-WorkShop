@@ -499,6 +499,7 @@ textarea {
         font-size: 20px;
         white-space: nowrap;
         bottom: 5%;
+        margin-right: 20px;
     }
 
     .Container {
