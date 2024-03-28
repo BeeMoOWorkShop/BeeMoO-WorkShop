@@ -6,14 +6,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const Hirelink = document.getElementById('HireLink');
     const MenuClick = document.getElementById('Menu');
 
-
-    
-    /*workLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        const bookmark = document.getElementById('WorkShow');
-        bookmark.scrollIntoView({ behavior: 'smooth' });
-    });*/
-
     Hirelink.addEventListener('click', (e) => {
         e.preventDefault();
         const bookmark = document.getElementById('Hire');
@@ -29,23 +21,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
             document.querySelector('.headerSmaller').classList.add('active')
         }
     });
-      
-
-    /*PayLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        const bookmark = document.getElementById('Pay');
-        bookmark.scrollIntoView({ behavior: 'smooth' });
-    });
-
-    Contlink.addEventListener('click', (e) => {
-        e.preventDefault();
-        const bookmark = document.getElementById('cont');
-        bookmark.scrollIntoView({ behavior: 'smooth' });
-    });
-
-   /* Melink.addEventListener('click', (e) => {
-        e.preventDefault();
-        const bookmark = document.querySelector('.MyImage');
-        bookmark.scrollIntoView({ behavior: 'smooth' });
-    });*/
 });
