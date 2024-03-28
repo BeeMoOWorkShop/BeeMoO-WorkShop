@@ -544,6 +544,7 @@ textarea {
     .headerSmaller.active .nav {
         overflow-y: auto;
         max-height: 50vh;
+        overflow-x: hidden;
     }
 }
 
