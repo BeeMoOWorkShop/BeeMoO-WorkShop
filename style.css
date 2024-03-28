@@ -546,6 +546,10 @@ textarea {
         max-height: 50vh;
         overflow-x: hidden;
     }
+    .headerSmaller.active .nav a {
+        padding-top: 5px;
+        font-size: larger;
+    }
 }
 
 /* Styles for mobile screens */
